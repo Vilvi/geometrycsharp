@@ -11,7 +11,7 @@ internal class Program
 
         while (kørende)
         {
-            Console.Write("Vælg en formel: a=areal, o=omkreds, d=diameter ");
+            Console.Write("Vælg en formel: o=omkreds ");
             formel = Convert.ToChar(Console.ReadLine());
             if (formel == 'o')
             {
