@@ -1,0 +1,15 @@
+C:\Users\trade\Desktop\Windows Apps\Geometry\geometry\geometry\bin\Debug\net6.0\geometry.exe
+C:\Users\trade\Desktop\Windows Apps\Geometry\geometry\geometry\bin\Debug\net6.0\geometry.deps.json
+C:\Users\trade\Desktop\Windows Apps\Geometry\geometry\geometry\bin\Debug\net6.0\geometry.runtimeconfig.json
+C:\Users\trade\Desktop\Windows Apps\Geometry\geometry\geometry\bin\Debug\net6.0\geometry.dll
+C:\Users\trade\Desktop\Windows Apps\Geometry\geometry\geometry\bin\Debug\net6.0\geometry.pdb
+C:\Users\trade\Desktop\Windows Apps\Geometry\geometry\geometry\obj\Debug\net6.0\geometry.csproj.AssemblyReference.cache
+C:\Users\trade\Desktop\Windows Apps\Geometry\geometry\geometry\obj\Debug\net6.0\geometry.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\trade\Desktop\Windows Apps\Geometry\geometry\geometry\obj\Debug\net6.0\geometry.AssemblyInfoInputs.cache
+C:\Users\trade\Desktop\Windows Apps\Geometry\geometry\geometry\obj\Debug\net6.0\geometry.AssemblyInfo.cs
+C:\Users\trade\Desktop\Windows Apps\Geometry\geometry\geometry\obj\Debug\net6.0\geometry.csproj.CoreCompileInputs.cache
+C:\Users\trade\Desktop\Windows Apps\Geometry\geometry\geometry\obj\Debug\net6.0\geometry.dll
+C:\Users\trade\Desktop\Windows Apps\Geometry\geometry\geometry\obj\Debug\net6.0\refint\geometry.dll
+C:\Users\trade\Desktop\Windows Apps\Geometry\geometry\geometry\obj\Debug\net6.0\geometry.pdb
+C:\Users\trade\Desktop\Windows Apps\Geometry\geometry\geometry\obj\Debug\net6.0\geometry.genruntimeconfig.cache
+C:\Users\trade\Desktop\Windows Apps\Geometry\geometry\geometry\obj\Debug\net6.0\ref\geometry.dll
