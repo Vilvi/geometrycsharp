@@ -4,38 +4,38 @@ internal class Program
 {
     private static void Main(string[] args)
     {
-        bool kørende = true;
-        double pi, radius, resultat;
-        char valg, formel;
+        bool running = true;
+        double pi, radius, result;
+        char choice, formula;
         pi = Math.PI;
 
-        while (kørende)
+        while (running)
         {
-            Console.Write("Vælg en formel: o=omkreds a=areal ");
-            formel = Convert.ToChar(Console.ReadLine());
-            if (formel == 'o')
+            Console.Write("Choose a formula c = circumference a = area ");
+            formula = Convert.ToChar(Console.ReadLine());
+            if (formula == 'c')
             {
-                Console.Write("Hvad er radius? ");
+                Console.Write("What's the radius? ");
                 radius = Convert.ToDouble(Console.ReadLine());
-                resultat = 2 * pi * radius;
-                Console.WriteLine("Omkreds er: " + resultat);
+                result = 2 * pi * radius;
+                Console.WriteLine("Circumference is: " + result);
 
-            } else if (formel == 'a')
+            } else if (formula == 'a')
             {
-                Console.Write("Hvad er radius? ");
+                Console.Write("What's the radius? ");
                 radius = Convert.ToDouble(Console.ReadLine());
-                resultat = pi * Math.Pow(radius, 2);
-                Console.WriteLine("Areal er: " + resultat);
+                result = pi * Math.Pow(radius, 2);
+                Console.WriteLine("Area is: " + result);
             }
-            Console.Write("Vil du køre igen? j/n ");
-            valg = Convert.ToChar(Console.ReadLine());
-            if (valg == 'j')
+            Console.Write("Do you want to run again? y/n ");
+            choice = Convert.ToChar(Console.ReadLine());
+            if (choice == 'y')
             {
-                kørende = true;
+                running = true;
             }
             else
             {
-                kørende = false;
+                running = false;
             }
         }
     }
