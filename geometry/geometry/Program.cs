@@ -11,7 +11,7 @@ internal class Program
 
         while (kørende)
         {
-            Console.Write("Vælg en formel: o=omkreds ");
+            Console.Write("Vælg en formel: o=omkreds a=areal ");
             formel = Convert.ToChar(Console.ReadLine());
             if (formel == 'o')
             {
@@ -20,9 +20,15 @@ internal class Program
                 resultat = 2 * pi * radius;
                 Console.WriteLine("Omkreds er: " + resultat);
 
+            } else if (formel == 'a')
+            {
+                Console.Write("Hvad er radius? ");
+                radius = Convert.ToDouble(Console.ReadLine());
+                resultat = pi * Math.Pow(radius, 2);
+                Console.WriteLine("Areal er: " + resultat);
             }
-                Console.Write("Vil du køre igen? j/n ");
-                valg = Convert.ToChar(Console.ReadLine());
+            Console.Write("Vil du køre igen? j/n ");
+            valg = Convert.ToChar(Console.ReadLine());
             if (valg == 'j')
             {
                 kørende = true;
