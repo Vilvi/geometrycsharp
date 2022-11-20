@@ -52,12 +52,32 @@ internal class Program
     private static double AskForRadius()
     {
         Console.Write("What's the radius? ");
-        return Convert.ToDouble(Console.ReadLine());
+        // Checks if the string entered can be converted to a double.
+        try
+        {
+            return Convert.ToDouble(Console.ReadLine());
+        }
+        catch(Exception e)
+        {
+            Console.WriteLine(e.Message);
+            Console.WriteLine("Please enter a valid number");
+            return Convert.ToDouble(Console.ReadLine());
+        }
     }
     // Asks for the which formula the user wishes to calculate in the given shape.
     private static char AskFormula()
     {
         Console.Write("Choose a formula c = circumference a = area ");
-        return Convert.ToChar(Console.ReadLine());
+        // Checks if the user filled in a character.
+        try
+        {
+            return Convert.ToChar(Console.ReadLine());
+        }
+        catch(Exception e)
+        {
+            Console.WriteLine(e.Message);
+            Console.WriteLine("Please enter a valid character (c / a)");
+            return Convert.ToChar(Console.ReadLine());
+        }
     }
 }
