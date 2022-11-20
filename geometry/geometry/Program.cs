@@ -37,27 +37,27 @@ internal class Program
                 running = false;
             }
         }
-        // Calculates the circumference when given the radius.
-        double CalculateCircumference(double radius)
-        {
-            return 2 * Math.PI * radius;
-        }
-        // Calculates the area when given the radius.
-        double CalculateArea(double radius)
-        {
-            return Math.PI * Math.Pow(radius, 2);
-        }
-        // Asks the user what the radius is and returns it.
-        double AskForRadius()
-        {
-            Console.Write("What's the radius? ");
-            return Convert.ToDouble(Console.ReadLine());
-        }
-        // Asks for the which formula the user wishes to calculate in the given shape.
-        char AskFormula()
-        {
-            Console.Write("Choose a formula c = circumference a = area ");
-            return Convert.ToChar(Console.ReadLine());
-        }
+    }
+    // Calculates the circumference when given the radius.
+    private static double CalculateCircumference(double radius)
+    {
+        return 2 * Math.PI * radius;
+    }
+    // Calculates the area when given the radius.
+    private static double CalculateArea(double radius)
+    {
+        return Math.PI * Math.Pow(radius, 2);
+    }
+    // Asks the user what the radius is and returns it.
+    private static double AskForRadius()
+    {
+        Console.Write("What's the radius? ");
+        return Convert.ToDouble(Console.ReadLine());
+    }
+    // Asks for the which formula the user wishes to calculate in the given shape.
+    private static char AskFormula()
+    {
+        Console.Write("Choose a formula c = circumference a = area ");
+        return Convert.ToChar(Console.ReadLine());
     }
 }
