@@ -5,6 +5,7 @@ internal class Program
 {
     private static void Main(string[] args)
     {
+        Calculations calculation1 = new Calculation();
         // To check if the user wants to program to keep running.
         bool running = true;
         double pi, radius, result;
@@ -17,7 +18,7 @@ internal class Program
             formula = AskFormula();
             if (formula == 'c')
             {
-                radius = AskForRadius();
+                radius = calculation1.AskForRadius();
                 Console.WriteLine("Circumference is: " + CalculateCircumference(radius));
 
             } else if (formula == 'a')
@@ -48,6 +49,7 @@ internal class Program
     {
         return Math.PI * Math.Pow(radius, 2);
     }
+    /*
     // Asks the user what the radius is and returns it.
     private static double AskForRadius()
     {
@@ -64,6 +66,7 @@ internal class Program
             return Convert.ToDouble(Console.ReadLine());
         }
     }
+    */
     // Asks for the which formula the user wishes to calculate in the given shape.
     private static char AskFormula()
     {
