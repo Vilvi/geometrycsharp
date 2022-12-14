@@ -1,22 +1,17 @@
 ﻿using System;
+using System.Security.Cryptography.X509Certificates;
 
 public class Calculations
 {
-	public float result;
-	public char choice, formula;
-
-	public Calculations()
+	// Takes pi from the Math object and makes it into a variable that is easier to write. Also makes it static so the static method can use it.
+	static double pi = Math.PI;
+	
+	public static double CalcCircleArea(double radius)
 	{
-	}
-
-	public float AskForRadius()
+		return pi * Math.Pow(radius, 2);
+    }
+	public static double CalcCircleCircumference(double radius)
 	{
-		Console.Write("What is the radius? ");
-		return System.Convert.ToFloat(System.Console.Readline());
-	}
-
-	public float CalcAreaCircle()
-	{
-        return Math.PI * Math.Pow(radius, 2);
+        return 2 * pi * radius;
     }
 }
