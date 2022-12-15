@@ -10,7 +10,7 @@ namespace geometry
     {
         public static char AskShape()
         {
-            Console.Write("Which shape do you wish to calculate?: ");
+            Console.Write("Which shape do you wish to calculate? (t = triangle, s = square, c = circle): ");
             try
             {
                 return Convert.ToChar(Console.ReadLine());

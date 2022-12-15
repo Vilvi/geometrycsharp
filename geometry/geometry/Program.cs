@@ -9,9 +9,8 @@ internal class Program
         // To check if the user wants to program to keep running.
         bool running = true;
         // Radius will be used in many calculations and will be asked for.
-        double radius;
         // Choice is the choice of running the program again. Shape is which shape the user wishes to use. Formula is the choice of formula for the given shape. These are all input choices.
-        char choice, shape, formula;
+        char choice;
 
         while (running)
         {
@@ -30,6 +29,7 @@ internal class Program
                         case 'a':
                             Console.WriteLine($"Area is: {Calculations.CalcCircleArea(UserInput.AskNumber("radius"))}");
                             break;
+                        // If no case is hit.
                         default:
                             Console.WriteLine("Please enter a valid letter for the formula you wish to calculate. a = area, c = circumference");
                             break;
@@ -41,9 +41,32 @@ internal class Program
                     switch (UserInput.AskFormula())
                     {
                         case 'a':
-                            double triBase = UserInput.AskNumber("length");
-                            double triHeight = UserInput.AskNumber("height");
-                            Console.WriteLine($"Area is: {Calculations.CalcTriangleArea(triBase, triHeight)}");
+                            double length = UserInput.AskNumber("length");
+                            double height = UserInput.AskNumber("height");
+                            Console.WriteLine($"Area is: {Calculations.CalcTriangleArea(length, height)}");
+                            break;
+
+                        case 'c':
+                            double side1 = UserInput.AskNumber("the length of side 1");
+                            double side2 = UserInput.AskNumber("the length of side 2");
+                            double side3 = UserInput.AskNumber("the length of side 3");
+                            Console.WriteLine($"Circumference is: {Calculations.CalcTriangleCicumference(side1, side2, side3)}");
+                            break;
+                    }
+                break;
+
+                case 's':
+                    switch (UserInput.AskFormula())
+                    {
+                        case 'a':
+                            double length = UserInput.AskNumber("length");
+                            double height = UserInput.AskNumber("height");
+                            Console.WriteLine($"Area is: {Calculations.CalcSquareArea(length, height)}");
+                            break;
+
+                        case 'c':
+                            double length2 = UserInput.AskNumber("length");
+                            Console.WriteLine($"Cicumference is: {Calculations.CalcSquareCircumference(length2)}");
                             break;
                     }
                 break;

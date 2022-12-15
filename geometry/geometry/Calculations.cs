@@ -15,8 +15,23 @@ public class Calculations
         return 2 * pi * radius;
     }
 
-	public static double CalcTriangleArea(double triBase, double height)
+	public static double CalcTriangleArea(double length, double height)
 	{
-		return 0.5 * triBase * height;
+		return 0.5 * length * height;
+	}
+
+	public static double CalcTriangleCicumference(double side1, double side2, double side3)
+	{
+		return side1 * side2 * side3;
+	}
+
+	public static double CalcSquareArea(double length, double height)
+	{
+		return length * height;
+	}
+
+	public static double CalcSquareCircumference(double length)
+	{
+		return 4 * length;
 	}
 }
