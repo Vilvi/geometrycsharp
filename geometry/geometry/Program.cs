@@ -47,9 +47,9 @@ internal class Program
                             break;
 
                         case 'c':
-                            double side1 = UserInput.AskNumber("the length of side 1");
-                            double side2 = UserInput.AskNumber("the length of side 2");
-                            double side3 = UserInput.AskNumber("the length of side 3");
+                            double side1 = UserInput.AskNumber("length of side 1");
+                            double side2 = UserInput.AskNumber("length of side 2");
+                            double side3 = UserInput.AskNumber("length of side 3");
                             Console.WriteLine($"Circumference is: {Calculations.CalcTriangleCicumference(side1, side2, side3)}");
                             break;
                     }
