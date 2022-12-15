@@ -1,4 +1,5 @@
-﻿using System;
+﻿using geometry;
+using System;
 using System.Runtime.CompilerServices;
 
 internal class Program
@@ -14,20 +15,25 @@ internal class Program
 
         while (running)
         {
+            // Asks which formula in the given shape the user wishes to know.
             formula = AskFormula();
-            if (formula == 'c')
+            switch (formula)
             {
-                radius = AskForRadius();
-                Console.WriteLine("Circumference is: " + Calculations.CalcCircleCircumference(radius));
+                // c = circumference.
+                case 'c':
+                    Console.WriteLine($"Circumference is: {Calculations.CalcCircleCircumference(UserInput.AskForRadius())}.");
+                    break;
+                // a = area.
+                case 'a':
+                    Console.WriteLine($"Area is: {Calculations.CalcCircleArea(UserInput.AskForRadius())}");
+                    break;
+                default:
+                    Console.WriteLine("Please enter a valid letter for the formula you wish to calculate. a = area, c = circumference");
+                    break;
 
-            } else if (formula == 'a')
-            {
-                radius = AskForRadius();
-                Console.WriteLine("Area is: " + Calculations.CalcCircleArea(radius));
             }
             // Ask the user if they want to run again. 'y' changes the running boolean to true to keep the program running.
-            Console.Write("Do you want to run again? y/n ");
-            choice = Convert.ToChar(Console.ReadLine());
+            choice = UserInput.AskForContinue();
             if (choice == 'y')
             {
                 running = true;
@@ -36,22 +42,6 @@ internal class Program
             {
                 running = false;
             }
-        }
-    }
-    // Asks the user what the radius is and returns it.
-    private static double AskForRadius()
-    {
-        Console.Write("What's the radius? ");
-        // Checks if the string entered can be converted to a double.
-        try
-        {
-            return Convert.ToDouble(Console.ReadLine());
-        }
-        catch(Exception e)
-        {
-            Console.WriteLine(e.Message);
-            Console.WriteLine("Please enter a valid number");
-            return Convert.ToDouble(Console.ReadLine());
         }
     }
     // Asks for the which formula the user wishes to calculate in the given shape.
