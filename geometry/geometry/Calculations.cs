@@ -14,4 +14,9 @@ public class Calculations
 	{
         return 2 * pi * radius;
     }
+
+	public static double CalcTriangleArea(double triBase, double height)
+	{
+		return 0.5 * triBase * height;
+	}
 }

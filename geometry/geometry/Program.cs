@@ -15,22 +15,37 @@ internal class Program
 
         while (running)
         {
-            // Asks which formula in the given shape the user wishes to know.
-            formula = AskFormula();
-            switch (formula)
+            switch (UserInput.AskForShape())
             {
-                // c = circumference.
+                // c = circle.
                 case 'c':
-                    Console.WriteLine($"Circumference is: {Calculations.CalcCircleCircumference(UserInput.AskForRadius())}.");
-                    break;
-                // a = area.
-                case 'a':
-                    Console.WriteLine($"Area is: {Calculations.CalcCircleArea(UserInput.AskForRadius())}");
-                    break;
-                default:
-                    Console.WriteLine("Please enter a valid letter for the formula you wish to calculate. a = area, c = circumference");
-                    break;
+                    // Asks which formula in the given shape the user wishes to know.
+                    switch (UserInput.AskFormula())
+                    {
+                        // c = circumference.
+                        case 'c':
+                            Console.WriteLine($"The circumference is: {Calculations.CalcCircleCircumference(UserInput.AskForNumber("radius"))}");
+                            break;
+                        // a = area.
+                        case 'a':
+                            Console.WriteLine($"Area is: {Calculations.CalcCircleArea(UserInput.AskForNumber("radius"))}");
+                            break;
+                        default:
+                            Console.WriteLine("Please enter a valid letter for the formula you wish to calculate. a = area, c = circumference");
+                            break;
 
+                    }
+                    break;
+                    /*
+                case 't':
+                    switch (UserInput.AskFormula())
+                    {
+                        case 'a':
+                            Console.WriteLine($"Area is: {Calculations.CalcTriangleArea()}");
+                            break;
+                    }
+                break;
+                    */
             }
             // Ask the user if they want to run again. 'y' changes the running boolean to true to keep the program running.
             choice = UserInput.AskForContinue();
@@ -42,22 +57,6 @@ internal class Program
             {
                 running = false;
             }
-        }
-    }
-    // Asks for the which formula the user wishes to calculate in the given shape.
-    private static char AskFormula()
-    {
-        Console.Write("Choose a formula c = circumference a = area ");
-        // Checks if the user filled in a character.
-        try
-        {
-            return Convert.ToChar(Console.ReadLine());
-        }
-        catch(Exception e)
-        {
-            Console.WriteLine(e.Message);
-            Console.WriteLine("Please enter a valid character (c / a)");
-            return Convert.ToChar(Console.ReadLine());
         }
     }
 }
