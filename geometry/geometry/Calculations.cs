@@ -34,4 +34,9 @@ public class Calculations
 	{
 		return 4 * length;
 	}
+
+	public static double CalcCubeArea(double length)
+	{
+		return 6 * (Math.Pow(length, 2));
+	}
 }

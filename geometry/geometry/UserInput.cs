@@ -8,18 +8,18 @@ namespace geometry
 {
     internal class UserInput
     {
-        public static char AskShape()
+        public static string AskShape()
         {
-            Console.Write("Which shape do you wish to calculate? (t = triangle, s = square, c = circle): ");
+            Console.Write("Which shape do you wish to calculate? (t = triangle, s = square, c = circle cu = cube): ");
             try
             {
-                return Convert.ToChar(Console.ReadLine());
+                return Console.ReadLine();
             }
             catch (Exception e)
             {
                 Console.WriteLine(e.Message);
                 Console.Write("Please enter a shape. t = triangle, c = circle, s = square");
-                return Convert.ToChar(Console.ReadLine());
+                return Console.ReadLine();
             }
         }
         // Asks for the which formula the user wishes to calculate in the given shape.

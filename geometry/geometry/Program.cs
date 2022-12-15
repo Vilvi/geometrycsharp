@@ -17,7 +17,7 @@ internal class Program
             switch (UserInput.AskShape())
             {
                 // c = circle.
-                case 'c':
+                case "c":
                     // Asks which formula in the given shape the user wishes to know.
                     switch (UserInput.AskFormula())
                     {
@@ -36,8 +36,8 @@ internal class Program
 
                     }
                     break;
-
-                case 't':
+                    // t = triangle
+                case "t":
                     switch (UserInput.AskFormula())
                     {
                         case 'a':
@@ -54,8 +54,8 @@ internal class Program
                             break;
                     }
                 break;
-
-                case 's':
+                    // s = square
+                case "s":
                     switch (UserInput.AskFormula())
                     {
                         case 'a':
@@ -70,6 +70,16 @@ internal class Program
                             break;
                     }
                 break;
+                    // cu = cube
+                case "cu":
+                    switch (UserInput.AskFormula())
+                    {
+                        case 'a':
+                            double length3 = UserInput.AskNumber("length");
+                            Console.WriteLine($"Area is: {Calculations.CalcCubeArea(length3)}");
+                            break;
+                    }
+                    break;
             }
 
             // Ask the user if they want to run again. 'y' changes the running boolean to true to keep the program running.
