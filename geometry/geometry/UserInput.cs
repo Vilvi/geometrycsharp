@@ -8,7 +8,7 @@ namespace geometry
 {
     internal class UserInput
     {
-        public static char AskForShape()
+        public static char AskShape()
         {
             Console.Write("Which shape do you wish to calculate?: ");
             try
@@ -39,37 +39,7 @@ namespace geometry
             }
         }
 
-        public static double AskForRadius()
-        {
-            // Asks the user to inpu a radius, then converts it to a double. Catches exception if a non double is entered.
-            Console.Write("Please enter the radius: ");
-            try
-            {
-                return Convert.ToDouble(Console.ReadLine());
-            }
-            catch (Exception e)
-            {
-                Console.WriteLine(e.Message);
-                Console.Write("Please enter a number: ");
-                return Convert.ToDouble(Console.ReadLine());
-            }
-        }
-
-        public static double AskForHeight()
-        {
-            try
-            {
-                return Convert.ToDouble(Console.ReadLine());
-            }
-            catch(Exception e)
-            {
-                Console.WriteLine(e.Message);
-                Console.Write("Please enter a number: ");
-                return Convert.ToDouble(Console.ReadLine());
-            }
-        }
-
-        public static double AskForNumber(string number)
+        public static double AskNumber(string number)
         {
             Console.Write($"Please enter the {number}: ");
             try
@@ -84,7 +54,7 @@ namespace geometry
             }
         }
 
-        public static char AskForContinue()
+        public static char AskContinue()
         {
             // Asks the user to input an answer for whether or not they want to continue. If they enter 'y' or 'n' the catch is not triggered.
             try

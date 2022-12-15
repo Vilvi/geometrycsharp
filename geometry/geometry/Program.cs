@@ -15,7 +15,7 @@ internal class Program
 
         while (running)
         {
-            switch (UserInput.AskForShape())
+            switch (UserInput.AskShape())
             {
                 // c = circle.
                 case 'c':
@@ -24,11 +24,11 @@ internal class Program
                     {
                         // c = circumference.
                         case 'c':
-                            Console.WriteLine($"The circumference is: {Calculations.CalcCircleCircumference(UserInput.AskForNumber("radius"))}");
+                            Console.WriteLine($"The circumference is: {Calculations.CalcCircleCircumference(UserInput.AskNumber("radius"))}");
                             break;
                         // a = area.
                         case 'a':
-                            Console.WriteLine($"Area is: {Calculations.CalcCircleArea(UserInput.AskForNumber("radius"))}");
+                            Console.WriteLine($"Area is: {Calculations.CalcCircleArea(UserInput.AskNumber("radius"))}");
                             break;
                         default:
                             Console.WriteLine("Please enter a valid letter for the formula you wish to calculate. a = area, c = circumference");
@@ -36,19 +36,21 @@ internal class Program
 
                     }
                     break;
-                    /*
+
                 case 't':
                     switch (UserInput.AskFormula())
                     {
                         case 'a':
-                            Console.WriteLine($"Area is: {Calculations.CalcTriangleArea()}");
+                            double triBase = UserInput.AskNumber("length");
+                            double triHeight = UserInput.AskNumber("height");
+                            Console.WriteLine($"Area is: {Calculations.CalcTriangleArea(triBase, triHeight)}");
                             break;
                     }
                 break;
-                    */
             }
+
             // Ask the user if they want to run again. 'y' changes the running boolean to true to keep the program running.
-            choice = UserInput.AskForContinue();
+            choice = UserInput.AskContinue();
             if (choice == 'y')
             {
                 running = true;
